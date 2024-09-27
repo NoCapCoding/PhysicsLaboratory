@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong1_Lop11.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong2_Lop11.html">Chương 2</a>
+                    <a href="Chuong3_Lop11.html">Chương 3</a>
+                    <a href="Chuong4_Lop11.html">Chương 4</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> MÔ TẢ DAO ĐỘNG</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> MỘT SỐ DAO ĐỘNG ĐIỀU HÒA THƯỜNG GẶP</a>
+            <a href="#" onclick="showContent('bai3')"><strong>Bài 3:</strong> NĂNG LƯỢNG TRONG DAO ĐỘNG ĐIỀU HÒA</a>
+            <a href="#" onclick="showContent('bai4')"><strong>Bài 4:</strong> DAO ĐỘNG TẮC DẦN - DAO ĐỘNG CƯỠNG BỨC VÀ HIỆN TƯỢNG CỘNG HƯỞNG</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1>Bài 1: MÔ TẢ DAO ĐỘNG</h1>
+                <h2>I. Dao động</h2>
+                <ul>
+                    <li>Chuyển động qua lại quanh một vị trí cân bằng được gọi là <strong><u>dao động</u></strong></li>
+                    <li><strong><u>Dao động tự do</u></strong> là chuyển động không có lực cản không khí hoặc môi trường khi đó dao động sẽ tiếp diễn</li>
+                    <li><strong><u>Li độ</u></strong> là độ dịch chuyển của vật so với vị trí cân bằng</li>
+                    <li><strong><u>Biên độ dao động(A)</u></strong> là độ dịch chuyển lớn nhất của vật dao động so với vị trí cân bằng, biên độ dao động là một số dương</li>
+                    <li><strong><u>Chu kì(T)</u></strong> là khoảng thời gian để vật thực hiện một dao động</li>
+                    <p>\[\text{T=} \frac{\text{∆t}}{\text{N}} \text{=} \frac{\text{1}}{\text{f}}\]</p>
+                    <li><strong><u>Tần số(f)</u></strong> là số dao động vật thực hiện được trong một giây. Đơn vị: Hertz(Hz)</li>
+                    <p>\[\text{f=} \frac{\text{N}}{\text{Δt}} \text{=} \frac{\text{1}}{\text{T}}\]</p>
+                    <li><strong><u>Tần số góc (ω):</u></strong></li>
+                    <p>\[\text{ω=} \frac{\text{2π}}{\text{T}} \text{=2πf}\]</p>
+                </ul>
+                <h2>II. Dao động điều hòa</h2>
+                <ul>
+                    <li>Dao động điều hòa là dao động trong đó li độ của vật là một hàm cosin (hoặc sin) của thời gian</li>
+                    <li><strong><u>Phương trình dao động điều hòa: </u></strong></li>
+                    <ul>
+                        <li>x=A cos(ωt+φ)</li>
+                        <li>x=0 (ở vị trí cân bằng)</li>
+                        <li>x<sub>max</sub>=A (ở biên dương)</li>
+                        <li>x=-A(ở biên âm)</li>
+                    </ul>
+                    <li>Vận tốc và gia tốc của vật dao động điều hòa cũng biến thiên tuần hoàn theo quy luật hàm số sin (cosin) cùn gchu kì T của li độ</li>
+                    <li><strong><u>Phương trình vận tốc trong dao động điều hòa: </u></strong>></li>
+                    <ul>
+                        <li>v=-A sin(ωt+φ)</li>
+                        <li>v<sub>max</sub> = Aω (ở vị trí cân bằng)</li>
+                        <li>v=0 (ở 2 biên)</li>
+                    </ul>
+                    <li><strong><u>Phương trình gia tốc trong dao động điều hòa: </u></strong>></li>
+                    <ul>
+                        <li>a=-ω<sup>2</sup> -ω<sup>2</sup> cos(ωt+φ)</li>
+                        <li>a<sub>min</sub>=-ω<sup>2</sup> A (Ở biên dương)</li>
+                        <li>a<sub>max</sub>=ω<sub>2</sub> A (Ở biên âm)</li>
+                        <li>|a|<sub>min</sub>=0 (Ở vị trí cân bằng)</li>
+                        
+                    </ul>
+                    <li>$$\vec{a}$$ luôn hướng về vị trí cân bằng và luôn ngược dấu với li độ. </li>
+                    <li><strong><u>Pha dao động</u></strong> tại một thời điểm được tính bàng số phần đã thực hiện công của một chu kì</li>
+                    <li>φ được gọi là pha ban đầu của dao động (khi t=0)</li>
+                    <li><strong><u>Dao động cùng pha:</u></strong> hai vật dao động đều có cùng chu kì và có trạng thái giống nhau tại mỗi thời điểm</li>
+                    <li><strong><u></u>Dao động lệch pha:</strong> hai vật dao động đều có cùng chu kì và vật 1 đạt li độ cực đại sớm hơn vật 2 một khoảng thời gian Δt</li>
+                    <li>Độ lệch pha của chúng luôn không đổi khi chúng dao động ( ứng với một phần của chu kì, bằng \[\frac{\text{∆t}}{\text{T}}\] )</li>
+                </ul>
+            </div>
+            <div id="bai2">
+                <h1>Bài 2: MỘT SỐ DAO ĐỘNG ĐIỀU HÒA THƯỜNG GẶP</h1>
+                <h2>I. Con lắc đơn</h2>
+                <ul>
+                    <li>Con lắc đơn gồm một vật nhỏ khối lương m, treo ở đầu một sợi dây hoặc một thanh nhẹ không giãn có chiều dài l.</li>
+                    <li>Chu kì dao động của con lắc đơn không phụ thuộc vào biên độ dao động mà chỉ phụ thuộc vào chiều dài dây và gia tốc rơi tự do
+                    </li>
+                </ul>
+                <h2>II. Con lắc lò xo</h2>
+                <ul>
+                    <li>Gồm 1 lò xo có độ cứng k được gắn vào giá cố định, đầu còn lại treo vật có khối lượng m
+                    </li>
+                    <li>Chu kì dao động của con lắc lò xo không phụ thuộc vào biên độ dao động mà chỉ phụ thuộc vào độ dài dây và khối lượng vật
+                    </li>
+                    <li><strong><i>Chu kì dao động của cả con lắc đơn và con lắc lò xo đều không phụ thuộc vào biên độ dao động mà chỉ phụ thuộc vào đặc điểm cấu tạo
+                    </i></strong></li>
+                </ul>
+                <table>
+                    <tr>
+                        <td><strong> </strong></td>
+                        <td><strong>Con lắc đơn</strong></td>
+                        <td><strong>Con lắc lò xo</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tần số góc</strong></td>
+                        <td>$$ ω = \sqrt{\frac{\text{g}}{\text{l}}}$$</td>
+                        <td>$$ ω = \sqrt{\frac{\text{k}}{\text{m}}}$$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chu kì</strong></td>
+                        <td>$$ T = \frac{\text{2π}}{\text{ω}} = 2π \sqrt{\frac{\text{l}}{\text{g}}}$$</td>
+                        <td>$$ T = \frac{\text{2π}}{\text{ω}} = 2π \sqrt{\frac{\text{m}}{\text{k}}}$$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tần số</strong></td>
+                        <td>$$ T = \frac{\text{1}}{\text{2π}} \sqrt{\frac{\text{g}}{\text{l}}}$$</td>
+                        <td>$$ T = \frac{\text{1}}{\text{2π}} \sqrt{\frac{\text{k}}{\text{m}}}$$</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="bai3">
+                <h1>Bài 3: NĂNG LƯỢNG TRONG DAO ĐỘNG ĐIỀU HÒA</h1>
+                <h2>I. Sự chuyển hóa năng lượng trong dao động</h2>
+                <ul>
+                    <li><strong>Công thức động năng:</strong></li>
+                    <p>$$ W_t=mgh$$</p>
+                    <li><strong>Công thức thế năng: </strong></li>
+                    <p>$$ W_t= \frac{\text{1}}{\text{2}} mv^2 $$</p>
+                    <li>Trong quá trình con lắc đơn dao động, luôn có sự biến đổi qua lại giữa thế năng và động năng</li>
+                    <li>Động năng tăng lên bao nhiêu thì thế năng giảm bấy nhiêu và ngược lại</li>
+                    <li>Cơ năng của con lắc luôn không đổi</li>
+                    <li><strong>Công thức cơ năng: </strong></li>
+                    <p>$$W=W_t+W_đ$$</p>
+
+                </ul>
+                <h2>II.	Đồ thị năng lượng trong dao động điều hòa</h2>
+                <img src="https://video.vietjack.com/upload2/quiz_source1/2023/03/blobid2-1679370156.png">
+                <ul>
+                    <li>Động năng đạt cực đại khi vật đi qua vị trí cân bằng x=0</li>
+                    <li>Thế năng đạt cực đại khi vật ở hai vị trí biên x=±A</li>
+                    <li>Ở vị trí bất kì, cơ năng không thay đổi</li>
+                </ul>
+            </div>
+            <div id="bai4">
+                <h1>Bài 4: DAO ĐỘNG TẮT DẦN - DAO ĐỘNG CƯỠNG BỨC VÀ HIỆN TƯỢNG CỘNG HƯỞNG</h1>
+                <h2>I. Dao động tắt dần</h2>
+                <ul>
+                    <li>Dao động tắt dần là dao động có biên độ (năng lượng) giảm dần theo thời gian( do ma sát hay lực cản của môi trường)</li>
+                </ul>
+                <h2>II. Dao động cưỡng bức</h2>
+                <ul>
+                    <li>Dao động cưỡng bức là dao động chịu tác dụng của ngoại lực biến thiên tuần hoàn</li>
+                    <li>Tần số của vật luôn bằng tần số của ngoại lực cưỡng bức</li>
+                    <li>Biên độ dao động cưỡng bức sẽ càng tăng khi tần số ngoại lực càng gần bằng tần số riêng của hệ</li>
+                </ul>
+                <h2>III. Hiện tượng cộng hưởng</h2>
+                <ul>
+                    <li>Là hiện tượng biên độ dao động cưỡng bức tăng nhanh đến giá trị cực đại khi tần số f của ngoại lực bằng tần số riêng f <sub>0</sub> của hệ dao động</li>
+                    <li>Điều kiện cộng hưởng f =f<sub>0</sub></li>
+                </ul>
+            </div>
+            <div id="thinghiem">
+                <h1>Thí nghiệm</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

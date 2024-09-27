@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong4_Lop11.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong1_Lop11.html">Chương 1</a>
+                    <a href="Chuong2_Lop11.html">Chương 2</a>
+                    <a href="Chuong3_Lop11.html">Chương 3</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> CƯỜNG ĐỘ DÒNG ĐIỆN</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> ĐIỆN TRỞ</a>
+            <a href="#" onclick="showContent('bai3')"><strong>Bài 3:</strong> NGUỒN ĐIỆN, NĂNG LƯỢNG ĐIỆN VÀ CÔNG SUẤT ĐIỆN</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1>Bài 1: CƯỜNG ĐỘ DÒNG ĐIỆN</h1>
+                <h2>I. Chuyển động có hướng của hạt mang điện</h2>
+                <ul>
+                    <li>Dòng điện là dòng chuyển dời có hướng của các hạt mang điện (các điện tích)</li>
+                    <li>Chiều dòng điện được quy ước là chiêu từ cực dương, qua dây dẫn đến cực âm</li>
+                    <li>Bên trong kim loại có các electron tự do chuyển động, cho phép kim loại dẫn điện (electron dẫn)</li>
+                    <li>Khi không có tác dụng của điện trường ngoài, không tạo ra dòng điện trong kim loại</li>
+                    <li>Dòng điện có thể chạy qua chất điện phân</li>
+                    <li>Trong dung dịch, chất điện phân tách ra thành các ion trái dấu: ion dương và ion âm</li>
+                </ul>
+                <h2>II. Cường độ dòng điện</h2>
+                <ul>
+                    <li>Dòng điện có thể gây ra tác dụng nhiệt, tác dụng phát sáng,tác dụng hóa học và tác dụng sinh lí</li>
+                    <li>Cường độ dòng điện đặc trưng cho tác dụng mạnh yêu của dòng điện</li>
+                    <li>Đơn vị: Ampe (A)</li>
+                    <li>Chiều quy ước của dòng điện là chiều dịch chuyển của các hạt mang điện tích dương</li>
+                    <p> $$\text{cường độ dòng điện=}\frac{\text{điện lượng}}{\text{thời gian}} \text{  hay I=} \frac{Δq}{Δt}$$</p>
+                    <li>Tốc đọ chuyển dời điện tích qua tiết diện thẳng của vật dẫn càng lớn thì cường độ dòng điện càng lớn</li>
+                    <li>Dòng điện có chiều và cường độ không thay đổi theo thời gian được gọi là dòng điện không đổi</li>
+                    <li>Biểu thức xác định điện lượng:</li>
+                    <p>$$Δq=I.Δt$$</p>
+                    <li>Biểu thức xác định cường độ dòng điện:</li>
+                    <p>$$I=Snve ⇨ v=\frac{I}{Sne}$$</p>
+                </ul>
+            </div>
+            <div id="bai2">
+                <h1>Bài 2: ĐIỆN TRỞ</h1>
+                <h2>I. Điện trở</h2>
+                <ul>
+                    <li><u><i>Điện trở của một vật dẫn bắt kì được xác định bằng tỉ số của hiệu điện thế giữa hai đầu vật dẫn và cường độ dòng điện qua nó</i></u></li>
+                    <p>$$ R= \frac{U}{I}$$</p>
+                    <li>Đơn vị: Ohm (Ω)</li>
+                    <li>Đường đặc trưng I-U của vật dẫn kim loại ở một nhiệt độ xác định là một đoạn thẳng đi qua gốc tọa độ</li>
+                    <li>Với một vật dẫn nhiệt ở nhiệt độ không đổi, cường độ dòng điện qua vật dẫn tỉ lệ thuận với hiệu điện thế giữa hai đầu của vật dẫn và tỉ lệ nghịch với điện trở của nó</li>
+                    <p>$$I=\frac{u}{R}$$</p>
+                </ul>
+                <h2>II. Nguyên nhân chính gây ra điện trở</h2>
+                <ul>
+                    <li>Trong kim loại, các electron tự do dịch chuyển có hướng dưới tác dụng của lực điện, tạo thành dòng điện. Trong quá trình chuyển động, các electron va chạm với nhau và với các ion nút mạng nên bị cản trở. Va chạm càng nhiều thì tốc độ dịch chuyển có hướng của các hạt mang điện càng giảm, dẫn đến dòng điện tại thành càng nhỏ. Nghĩa là, điện trở càng lớn</li>
+                </ul>
+                <h2>III. Ảnh hưởng của nhiệt độ lên điện trở</h2>
+                <ul>
+                    <li>Nhiệt độ của vật dẫn kim loại càng cao thì các ion dương dao động càng mạnh quanh các nút mạng, làm tăng khả năng va chạm với các electron tự do, kéo theo điện trở của vật tăng dần</li>
+                    <li>Định luật Ohm không áp dụng được đối với bóng đèn sợi đốt</li>
+                    <li>Một loại vật dẫn nhiệt có điện trở thay đổi một cách rõ rệt khi nhiệt độ thay đổi là điện trở nhiệt.</li>
+                    <li>Điện trở nhiệt có thể phân thành 2 loại:
+                        <ul>
+                            <li>Điện trở nhiệt thuận (PTC): điện trở tăng khi nhiệt độ tăng</li>
+                            <li>Điện trở nhiệt ngược (NTC): điện trở giảm khi nhiệt độ tăng</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="bai3">
+                <h1>Bài 3: NGUỒN ĐIỆN, NĂNG LƯỢNG ĐIỆN VÀ CÔNG SUẤT ĐIỆN</h1>
+                <h2>I. Nguồn điện</h2>
+                <ul>
+                    <li>Nguồn điện là thiết bị thực hiện công lên các hạt mang điện làm cho chúng dịch chuyển trong nguồn điện để tạo ra và duy trì giữa hai cực củ nó một hiệu điện thế</li>
+                    <li>Suất điện động của nguồn điện là đại lượng đặc trưng cho khả năng thực hiện công của nguồn điện, được đo bằng thương số giữa công A do nguồn điện thực hiện làm dịch chuyển một điện tích dương q bên trong nguồn điện từ cực âm đến cực dương và độ lớn của điện tích đó.</li>
+                    <p>$$E=\frac{A}{q}$$</p>
+                    <li>Đơn vị: Vôn (V)</li>
+                    <li>Suất điện động được xác định bằng công của nguồn điện dịch chuyển một điện tích đơn vị theo một vòng kín của mạch điện</li>
+                    <li>Khi mạch ngoài hở, suất điện động của nguồn điện có giá trị bằng hiệu điện thế giữa hai cực của nó</li>
+                    <li>Mỗi nguồn điện được đặc trưng bằng suất điện động E và điện trở trong r.</li>
+                    <p>$$E=U_R+U_r ⇨ U_R=E-U_r (IR=E-Ir)$$</p>
+                </ul>
+                <h2>II. Năng lượng điện và công suất điện</h2>
+                <ul>
+                    <li>Phần năng lượng của điện mà một đoạn mạch tiêu thụ khi có dòng điện chạy qua được đo bằng công của lực điện là các điện tích dịch chuyển có hướng</li>
+                    <p>$$A=Uq=UIt$$</p>
+                    <li>Công suất tiêu thụ năng lượng điện của đoạn mạch có giá trị bằng năng lượng điện mà đoạn mạch tiêu thụ trong một đơn vị thời gian</li>
+                    <p>$$P=\frac{A}{t}=UI$$</p>
+                    <li>Công của nguồn điện:</li>
+                    <p>$$A_n=E_q=EIt$$</p>
+                    <li>Công suát của nguồn điện</li>
+                    <p>$$P_n=\frac{A_n}{t}=EI$$</p>
+                </ul>
+
+            </div>
+            <div id="thinghiem">
+                <h1>Thí nghiệm</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

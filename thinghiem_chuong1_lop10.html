@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô phỏng chuyển động ném</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+        #simulation {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: #111;
+            border: 2px solid #444;
+            overflow: hidden;
+        }
+        .ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="simulation"></div>
+
+    <script>
+        const simulation = document.getElementById('simulation');
+        const gravity = 0.5;
+
+        function createBall(x, y) {
+            const ball = document.createElement('div');
+            ball.className = 'ball';
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+            simulation.appendChild(ball);
+
+            let positionX = x;
+            let positionY = y;
+            let velocityX = 2;
+            let velocityY = 0;
+
+            function update() {
+                velocityY += gravity;
+                positionX += velocityX;
+                positionY += velocityY;
+
+                if (positionY > simulation.clientHeight - ball.clientHeight) {
+                    positionY = simulation.clientHeight - ball.clientHeight;
+                    velocityY *= -0.7; // Phản hồi với lực giảm dần
+                }
+
+                ball.style.left = positionX + 'px';
+                ball.style.top = positionY + 'px';
+
+                if (positionX < simulation.clientWidth) {
+                    requestAnimationFrame(update);
+                } else {
+                    simulation.removeChild(ball);
+                }
+            }
+
+            update();
+        }
+
+        simulation.addEventListener('click', (event) => {
+            const rect = simulation.getBoundingClientRect();
+            const x = event.clientX - rect.left - 10;
+            const y = event.clientY - rect.top - 10;
+            createBall(x, y);
+        });
+    </script>
+</body>
+</html>

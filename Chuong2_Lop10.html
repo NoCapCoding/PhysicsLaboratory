@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            displayAlign: "left"
+        });
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong2_Lop10.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .center {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .equal {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong1_Lop10.html">Chương 1</a>
+                    <a href="Chuong3_Lop10.html">Chương 3</a>
+                    <a href="Chuong4_Lop10.html">Chương 4</a>
+                    <a href="Chuong5_Lop10.html">Chương 5</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> LỰC VÀ GIA TỐC</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> MỘT SỐ LỰC THƯỜNG GẶP</a>
+            <a href="#" onclick="showContent('bai3')"><strong>Bài 3:</strong> BA ĐỊNH LUẬT NEWTON VỀ CHUYỂN ĐỘNG</a>
+            <a href="#" onclick="showContent('bai4')"><strong>Bài 4:</strong> KHỐI LƯỢNG RIÊNG. ÁP SUẤT CHẤT LỎNG</a>
+            <a href="#" onclick="showContent('bai5')"><strong>Bài 5:</strong> TỔNG HỢP VÀ PHÂN TÍCH LỰC</a>
+            <a href="#" onclick="showContent('bai6')"><strong>Bài 6:</strong> MÔMEN LỰC. ĐIỀU KIỆN CÂN BẰNG CỦA VẬT</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1>Bài 1: LỰC VÀ GIA TỐC</h1>
+                <h2>I. Liên hệ giữa gia tốc với lực và khối lượng</h2>
+                <ul>
+                    <li>Độ lớn của gia tốc tỉ lệ thuận với độ lớn của lực (a ~ F).</li>
+                    <li>Độ lớn của gia tốc tỉ lệ nghịch với khối lượng của vật.</li>
+                    <p>\[a \text{ = } \frac{F}{m} \rightarrow F \text{ = } ma \]</p>
+                </ul>
+                <h2>II. Đơn vị cơ bản và đơn vị dẫn xuất</h2>
+                <ul>
+                    <li>Các phép đo trong khoa học kĩ thuật sử dụng đơn vị trong hệ SI để đảm bảo một hệ thống chuẩn chung trên toàn thế giới.</li>
+                    <table>
+                        <tr>
+                            <td><strong>Đại lượng</strong></td>
+                            <td><strong>Đơn vị</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Chiều dài</td>
+                            <td>Mét(m)</td>
+                        </tr>
+                        <tr>
+                            <td>Khối lượng</td>
+                            <td>Kilogam (kg)</td>
+                        </tr>
+                        <tr>
+                            <td>Thời gian</td>
+                            <td>Giây (s)</td>
+                        </tr>
+                        <tr>
+                            <td>Cường độ dòng điện</td>
+                            <td>Ampe (A)</td>
+                        </tr>
+                        <tr>
+                            <td>Nhiệt độ</td>
+                            <td>Kenvin (K)</td>
+                        </tr>
+                        <tr>
+                            <td>Lượng chất</td>
+                            <td>Mol (mol)</td>
+                        </tr>
+                        <tr>
+                            <td>Cường độ sáng</td>
+                            <td>Candela (cd)</td>
+                        </tr>
+                    </table>     
+                    <li><strong>Đơn vị cơ bản: </strong> Đơn vị nằm trong hệ SI.</li>           
+                    <li><strong>Đơn vị dẫn xuất: </strong> Đơn vị được biểu diễn qua hệ SI.</li>   
+                    <li>Đơn vị dẫn xuất được xác định bằng định nghĩa hoặc biểu thức tính của địa lượng đó.</li>      
+                </ul>
+                <h2>III. Định nghĩa đơn vị lực</h2>
+                <p>\[\text{Một niuton (N) là độ lớn của một lực gây ra gia tốc 1 } m \text{/} s^2 \text{ cho một vật có khối lượng 1kg.} \]</p>
+            </div>
+            <div id="bai2">
+                <h1>Bài 2: MỘT SỐ LỰC THƯỜNG GẶP</h1>
+                <h2>I. Vật chuyển động dưới tác dụng của các vật cân bằng và không cân bằng</h2>
+                <ul>
+                    <li>Lực tác dụng lên vật gây ra biến dạng hoặc làm biến đổi chuyển động của vật đó.</li>
+                    <li>Hai lực nằm dọc theo một đường thẳng, ngược chiều, tác dụng vào cùng một vật và có  độ lớn bằng nhau là hai lực cân bằng.</li>
+                    <li>Tác dụng của hai lực cân bằng lên vật triệt tiêu nhau ( lực tổng hợp của hai lực đó bằng không).</li>
+                    <li>Khi hai lực không cân bằng, lực tổng hợp của hai lực khác không và có hướng phụ thuộc vào hướng và độ lỡn cùa hai lực thành phần.</li>
+                    <li>Lực tổng hợp của các lực tác dụng lên vật gọi là hợp lực.</li>
+                </ul>
+                <h2>II. Một số lực thường gặp</h2>
+                <h3><strong>Trọng lực</strong></h3>	
+                <ul>
+                    <li>Trọng lực là lực hấp dẫn của Trái Đất tác dụng lên vật, đặt tại trọng tâm của vật và hướng thẳng đứng từ trên xuống.</li>
+                    <li>Khối lượng của một vật không thay đổi.</li>
+                    <li>Trọng lượng của một vật thay đổi ở các vị trí khác nhau ( phụ thuộc vào khảng cách từ tâm Trái Đất đến vật).</li>
+                    <li>\[\text{Công thức tính trọng lượng: } P = mg \]</li>
+                </ul>
+                <h3>Lực ma sát</h3>
+                <ul>
+                    <li>Lực ma sát là lực cản sự trượt hoặc lăn của vật này so với vật khác.</li>
+                    <li>Ma sát được chia thành:	Ma sát trượt, ,a sát lăn, Ma sát nghỉ.</li>
+                    <li> Nguyên nhân chính là do lực hút ( lực bám dính) giữa các vùng tiếp xúc của các bề mặt.</li>
+                <table>
+                    <tr>
+                        <td><strong>Ma sát trượt (ma sát động)</strong></td>
+                        <td><strong>Ma sát nghỉ (ma sát tĩnh)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Có phương dọc theo bề mặt tiếp xúc</td>
+                        <td rowspan="2">Có độ lớn từ 0 dến gá trị cần thiết để bắt đầu trượt</td>
+                    </tr>
+                    <tr>
+                        <td>Có ảnh hưởng rõ rệt</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Không phụ thuộc vào diện tích tiếp xúc</td>
+                        <td rowspan="2">F<sub>ma sá trượt</sub> ≤ F <sub>ma sát nghỉ cực đại</sub></td>
+                    </tr>
+                    <tr>
+                        <td>Tỉ lệ với lực ép vuông góc</td>
+                    </tr>
+                </table>
+                </ul>
+                <p>\[\text{Công thức tính hệ số ma sát: } \mu = \frac{F_\text{ms}}{N} \text{ (không có đơn vị)} \]</p>
+                <h3>Lực cản nước hoặc không khí</h3>
+                <ul>
+                    <li>Nguyên nhân: luôn có ma sát giữa bề mặt khí hoặc nước và bề mặt vật chuyển động.</li>
+                    <li>Lực cản luôn ngược hướng và có tác dụng cản trở chuyển động.</li>
+                    <li>Có thể làm giảm độ lớn lực cản của môi trường lên vật nếu vật có hình dạng phù hợp.</li>
+                </ul>
+                <h3>Lực đẩy Archimedes</h3>
+                <ul>
+                    <li>Mỗi vật ở trong chất lỏng hoặc chất khí đều chịu một lức nâng hướng lên trên (lực đẩy Archimedes).</li>
+                    <li>Độ lớn của lực đẩy Archimedes bằng trọng lượng của phần chất lỏng hoặc chất khí mà vật chiếm chỗ.</li>
+                    <li>\[\text{Công thức: } F_A \text{ = } d \text{ . } V\]</li>
+                </ul>
+                <h3>Lực căng dây</h3>
+                <ul>
+                    <li>Lực căng dây xuất hiện khi dây bị kéo căng, có phương dọc theo dây, chiều chống lại xu hướng bị kéo giãn.</li>
+                    <li>Lực đàn hồi của lò xo là lực căng của lò xo.</li>
+                </ul>       
+
+            </div>
+            <div id="bai3">
+                <h1>Bài 3: BA ĐỊNH LUẬT NEWTON VỀ CHUYỂN ĐỘNG</h1>
+                <h2>I. Định luật I Newton</h2>
+                <ul>
+                    <li><i>Vật sẽ đứng yên hoặc chuyển động thẳng đều mãi mãi trừ khi có hợp lực khác không tác dụng lên vật.</i></li>
+                    <li>Trạng thái đứng yên hoặc chuyển động thẳng đều cảu vật được gọi là trạng thái cân bằng của vật.</li>
+                    <li>Vật không thể ngay lập tức thai đổi chuyển đông mà luôn có xu hướng duy trì trạng thái chuyển động hoặc đứng yên đang có (Quán tính).</li>
+                </ul>
+                <h2>II.	Định luật II Newton</h2>
+                <ul>
+                    <li><i>Gia tốc của một vật có khối lượng không đổi tỉ lệ thuận với độ lớn và có cùng hướng với hợp lực khác không tác dụng lên vật.</i></li>
+                    <p>\[\vec{a} = \frac{\vec{F}}{m} \]</p>
+                    <li>Nếu hợp lực bằng không thì gia tốc bằng không (Vật đứng yên hoặc chuyển động thẳng đều).</li>
+                </ul>
+                <h2>III. Định luật III Newton</h2>
+                <ul>
+                    <li><i>Khi hai vật tương tác mỗi vật tác dụng một lực lên vật kia, hai lực này ngược hướng và có độ lớn bằng nhau.</i></li>
+                    <li>Hai lực này thường gọi là lực và phản lực:</li>
+                    <ul style="padding-left: 40px;">
+                        <li>Tác dụng lên hai vật có tương tác (điểm đặt lực khác nhau).</li>
+                        <li>Cùng phương ngược chiều.</li>
+                        <li>Có độ lớn bằng nhau.</li>
+                    </ul>
+                </ul>
+
+            </div>
+            <div id="bai4">
+                <h1>Bài 4: KHỐI LƯỢNG RIÊNG. ÁP SUẤT CHẤT LỎNG</h1>
+                <h2>I. Khối lượng riêng</h2>
+                <li>Khối lượng riêng của một chất là khối lượng của một đơn vị thể tích chất đó</li>
+                <table>
+                    <tr>
+                        <td><strong>Công thức</strong></td>
+                        <td><strong>Kí hiệu</strong></td>
+                    </tr>
+                    <tr>
+                        <td>\[\text{Khối lượng riêng } (kg/m^2) = \frac{\text{Khối lượng } (kg)}{\text{Thể tích } (m^3)} \]</td>
+                        <td>\[\rho = \frac{m}{V} \]</td>
+                    </tr>
+                </table>
+                <h2>II. Áp suất</h2>
+                <ul>
+                    <li>Áp suất đặc trưng cho tác dụng của áp lực lên mỗi đơn vị diện tích bị ép.</li>
+                    <li>Với một áp lực nhất định, diện tích bị ép càng lớn thì tác dụng của áp lực lên diện tích đó càng nhỏ ( áp suất càng nhỏ).</li>
+                    <li>\[\text{Một số đơn vị đo áp suất: 1 atm = 750 mmHg } \approx \text{ 105 Pa.} \]</li>
+                    <table>
+                        <tr>
+                            <td class="equal center">\[\text{Áp suất (Pa) } = \frac{\text{Độ lớn áp lực } (N)}{\text{Diện tích bị ép} (m^2)} \]</td>
+                            <td class="equal center">\[p = \frac{F}{S} \]</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="center">\( F = mg = (\rho \cdot V) \cdot g = (\rho \cdot Sh) \cdot g \)</td>
+                        </tr>
+                    </table>
+                </ul>
+                <h2>III.	Áp suất chất lỏng</h2>
+                <ul>
+                    <li>Áp lực tác dụng lên đấy bình bằng chính trọng lượng của chất lỏng cháu trong bình.</li>
+                    <li>Chất lỏng gây ra áp suất không chỉ lên đáy bình chứa mà còn lên thành bình và lên mọi điểm trong chát lỏng.</li>
+                    <p class="center">\[p = \frac{F}{S} = \frac{(\rho .Sh).g}{S} = \rho gh \]</p>
+                </ul>
+            </div>
+            <div id="bai5">
+                <h1>Bài 5: TỔNG HỢP VÀ PHÂN TÍCH LỰC</h1>
+                <h2>I. Tổng hợp lực đồng quy</h2>
+                <ul>
+                    <li>Tổng hợp lực là thay thế nhiều lực tác dụng đồng thời vào một vật bằng một lực có tác dụng giống hệt.</li>
+                    <li>Lực thay thế này gọi là hợp lực.</li>
+                    <li>Các lực được thay thế gọi là lực thành phần.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td><strong>Trường hợp</strong></td>
+                        <td><strong>Độ lớn</strong></td>
+                        <td><strong>Hướng</strong></td>
+                    </tr>
+                    <tr></tr>
+                        <td>$$\vec{F_1} \nearrow \nearrow \vec{F_2}$$</td>
+                        <td>\[F = F_1 + F_2 \]</td>
+                        <td>\[F \text{ cùng chiều với } F_1, F_2 \]</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">\[\vec{F_1} \nearrow \swarrow \vec{F_2} \]</td>
+                        <td rowspan="2">\[F = |F_1 + F_2| \]</td>
+                        <td>\[\text{Nếu } F > 0 \rightarrow F \text{ cùng chiều với } F_1 \]</td>
+                    </tr>
+                    <tr>
+                        <td>\[\text{Nếu } F < 0 \rightarrow F \text{ ngược chiều với } F_1 \]</td>
+                    </tr>
+                    <tr>
+                        <td>\[\vec{F_1} \perp \vec{F_2} \]</td>
+                        <td>\[F = \sqrt{F_1^2 + F_2^2} \]</td>
+                        <td>\[\text{cos } \theta = \frac{P}{F} \]</td>
+                    </tr>
+                    <tr>
+                        <td>\[\vec{F_1} \text{ hợp với } \vec{F_2} \text{ một góc } \alpha^\circ \]</td>
+                        <td>\[F^2 = F_1^2 + F_2^2 + 2F_1F_2 cos \alpha \]</td>
+                        <td>\[\text{cos } \theta = \frac{F^2 + F_1^2 - F_2^2}{2FF_1} \]</td>
+                    </tr>
+                </table>
+                <h2>II. Phân tích lực</h2>
+                <ul>
+                    <li>Lực F được phân tích thành hai thành phần vuông góc có giá trị bằng:</li>
+                    <ul style="padding-left: 40px;">
+                        <li>F<sub>x</sub>=F.cos⁡θ</li>
+                        <li>F<sub>y</sub>=F.cos⁡θ</li>
+                    </ul>
+                    <li>Với θ là góc giữa hướng của lực F và hướng O<sub>x</sub> (thường chọn trùng hướng chuyển động).</li>
+                </ul>
+
+            </div>
+            <div id="bai6">
+                <h1>MÔMEN LỰC. ĐIỀU KIỆN CÂN BẰNG CỦA VẬT</h1>
+                <h2>I.	Tổng hợp lực song song</h2>
+                <ul>
+                    <li>Hợp lực của hai lực song song, cùng chiều là một lực song song, cùng chiều với hai lực ấy cà có độ lớn bằng tổng các độ lớn của hai lực thành phần.</li>
+                    <p>\[F = F_1 + F_2 \]</p>
+                </ul>
+                <h2>II. Momen lực</h2>
+                <ul>
+                    <li>Đại lượng đặc trung cho tác dụng làm quay của một lwujc là momen của nó.</li>
+                    <li>Momen M cua một lwujc được tính bằng tich độ lớn của lực với khoảng cách từ trục quay đến đường thẳng từng với phương của lực (giá của lực).</li>
+                    <li>Đơn vị: N.m.</li>
+                </ul>
+                <h2>III.	Ngẫu lực. Momen ngẫu lực</h2>
+                <ul>
+                    <li>Để tạo thành một ngẫu lực, hai lực phải:</li>
+                    <ul style="padding-left: 40px;">
+                        <li>Tác dụng vào cùng một vật.</li>
+                        <li>Song song nhưng ngược chiều.</li>
+                        <li>Có giá cách nhau một khoảng d.</li>
+                        <li>Bằng nhau về độ lớn.</li>
+                    </ul>
+                    <li>Ngẫu lực chỉ có tác dụng làm quay vật.</li>
+                    <li>Momen của lực: 	Phụ thuộc vào vị trí trục quay.</li>
+                    <li>Momen của ngẫu lực:</li>
+                    <ul style="padding-left: 40px;">
+                        <li>Phụ thuộc vào khoảng cách giữa giá của hai lực.</li>
+                        <li>Không phụ thuộc vào điểm đặt của mỗi lực tác dụng.</li>    
+                        <li>Không phụ thuộc vào vị trí trục quay.</li>
+                    </ul>
+                </ul>
+                <h2>IV.	Điều kiện cân bằng của vật</h2>
+                <ul>
+                    <li>Một vật có trục quay cố định sẽ cân bằng khi tổng các momen lực có xu hướng làm vaath quay theo chiều khim đồng hồ bằng tổng các momen lực có xu hướng làm vaatjq uay ngược chiều kim đồng hồ (Quy tắc momen lực).</li>
+                    <li>Một vật cân bằng khi không có gia tốc và không quay.</li>
+                    <ul style="padding-left: 40px;">
+                        <li>Hợp lực tác dụng lên vật bằng 0.</li>
+                        <li>Tổng momen của các lực tác dụng lên vật đối với trục quay bất kì bằng 0.</li>
+                    </ul>
+                </ul>
+
+            </div>
+            <div id="thinghiem">
+                <h2>Thí nghiệm</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

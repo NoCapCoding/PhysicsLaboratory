@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong3_Lop10.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong1_Lop10.html">Chương 1</a>
+                    <a href="Chuong2_Lop10.html">Chương 2</a>
+                    <a href="Chuong4_Lop10.html">Chương 4</a>
+                    <a href="Chuong5_Lop10.html">Chương 5</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> NĂNG LƯỢNG VÀ CÔNG</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> BẢO TOÀN VÀ CHUYỂN HÓA NĂNG LƯỢNG</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1 style="color:white;"> Bài 1: NĂNG LƯỢNG VÀ CÔNG</h1>
+                <h2>I.	Công và sự truyền năng lượng</h2>
+                <ul>
+                    <li>Năng lượng có thể được truyền từ vật này sang vật khác thông qua tương tác.</li>
+                    <li>Năng lượng đặc trưng cho khả năng thực hiện công.</li>
+                    <li>Khi lực vuông góc với phương dịch chuyển thì sinh công bằng 0.</li>
+                    <li>Độ lớn của công đã thực hiện bằng phần năng lượng đã được truyền.</li>
+                    <p>$$A=F.d=F.s.cosα$$</p>
+                    <li>Đơn vị: 1 N.m = 1 J.</li>
+                </ul>
+                <h2>II.	Công suất</h2>
+                <ul>
+                    <li>Công suất biểu thị tốc độ thực hiện công của một lực.</li>
+                    <p>$$P=\frac{A}{t}$$</p>
+                    <p>$$P=F.v \text{ (công suát trung bình)}$$</p>
+                    <li>Đơn vị: 1 W = 1 J/s.</li>
+                    <li>Công suất còn được gọi là tốc độ thực hiện công.</li>
+                </ul>
+            </div>
+            <div id="bai2">
+                    <h1>Bài 2: BẢO TOÀN VÀ CHUYỂN HÓA NĂNG LƯỢNG</h1>
+                    <h2>I.	Thế năng và động năng</h2>
+                    <ul>
+                        <li>Trường hấp dẫn do Trái Đất gây ra xung quanh nó gọi là trường trọng lực.</li>
+                        <p>$$P=mg$$</p>
+                        <li>Thế năng trọng trường của một vật là dạng năng lượng tương tác giữa Trái Đất và vật.</li>
+                        <p>$$W_t=mgh$$</p>
+                        <li>Động năng là năng lượng một vật có được do chuyển động.</li>
+                        <p>$$W_đ=\frac{1}{2}mv^2$$</p>
+                    </ul>
+                    <h2>II.	Cơ năng</h2>
+                    <ul>
+                        <li>Thế năng và động năng là hai dạng của cơ năng.</li>
+                        <li>Cơ năng W của một vật bằng tổng thế năng W<sub>t</sub> và động năng W<sub>đ</sub> của nó.</li>
+                        <p>$$W=W_đ+W_t$$</p>
+                        <li>Trong quá trình chuyển động, động năng có thể giảm do chuyển hóa thành thế năng hoặc ngược lại.</li>
+                        <li>Quá trình chuyển hóa này thường kèm theo sự hao phí năng lượng.</li>
+                        <li>Tổng thế năng và động năng không đối ⇨ Bảo toàn cơ năng.</li>
+                    </ul>
+                    <h2>III.	Sự bảo toàn và chuyển hóa năng lượng. Hiệu suất</h2>
+                    <ul>
+                        <li>Năng lượng có thể được dự trữ và truyền từ dạng này sang dạng khác, từ vật này sang vật khác.</li>
+                        <li>Hiệu suất (H) dùng để miêu tả tỉ lệ giữa năng lượng có ích được tạo ra W<sub>có ích</sub> và tổng năng lượng cung cấp W<sub>cung cấp</sub>.</li>
+                        <p>$$H=\frac{W_\text{có ích}}{W_\text{cung cấp}}.100%$$</p>
+                        <li>Năng lượng không tự sinh ra hoặc không tự mất đi; năng lượng chỉ chuyển hóa từ dạng này sang dạng khác hoặc truyền từ vật này sang vật khác.</li>
+                        <p> ⇨ Bảo toàn năng lượng.</p>
+                    </ul>
+                </div>
+            
+            <div id="thinghiem">
+                <h1>Thí nghiệm</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

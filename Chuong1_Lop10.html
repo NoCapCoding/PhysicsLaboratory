@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            displayAlign: "left"
+        });
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong1_Lop10.css">
+    <style>
+
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        #startButton {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #startButton:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong2_Lop10.html">Chương 2</a>
+                    <a href="Chuong3_Lop10.html">Chương 3</a>
+                    <a href="Chuong4_Lop10.html">Chương 4</a>
+                    <a href="Chuong5_Lop10.html">Chương 5</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> TỐC ĐỘ, ĐỘ DỊCH CHUYỂN VÀ VẬN TỐC</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> ĐỒ THỊ ĐỘ DỊCH CHUYỂN THEO THỜI GIAN. ĐỘ DỊCH CHUYỂN TỔNG HỢP VÀ VẬN TỐC TỔNG HỢP</a>
+            <a href="#" onclick="showContent('bai3')"><strong>Bài 3:</strong> GIA TỐC VÀ ĐỒ THỊ VẬN TỐC - THỜI GIAN</a>
+            <a href="#" onclick="showContent('bai4')"><strong>Bài 4:</strong> CHUYỂN ĐỘNG BIẾN ĐỔI</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1>Bài 1: TỐC ĐỘ, ĐỘ DỊCH CHUYỂN VÀ VẬN TỐC</h1>
+                <h2>I. Tốc độ</h2>
+                <ul>
+                    <li>Tốc độ trung bình là đại lượng đặc trưng cho độ nhanh, chậm của chuyển động.</li>
+                    <li>Tốc độ trung bình trong một thời gian rất ngắn được gọi là tốc độ tức thời.</li>
+                    <li>Tốc độ được tính bằng mét trên giây (m/s).</li>
+                    <li>Có nhiều đơn vị đo tốc độ, lựa chọn đơn vị phụ thuộc vào tình huống.</li>
+                </ul>
+                <h2>II. Quãng đường và độ dịch chuyển</h2>
+                <p>Khoảng cách mà vật di chuyển theo một hướng xác định là <strong><u>độ dịch chuyển</u></strong>.</p>
+                <table>
+                    <tr>
+                        <td><strong>Quãng đường</strong></td>
+                        <td><strong>Độ dịch chuyển</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Đại lượng vô hướng.</p>
+                            <p>Chỉ được đặc trưng bởi độ lớn.</p>
+                        </td>
+                        <td>
+                            <p>Đại lượng vectơ.</p>
+                            <p>Đặc trưng bởi độ lớn và hướng.</p>
+                        </td>
+                    </tr>
+                </table>
+                <h2>III. Vận tốc</h2>
+                <ul>
+                    <li>Là tốc độ di chuyển của một vật theo một hướng cụ thể.</li>
+                    <li>Là đại lượng vectơ, tốc độ là đại lượng vô hướng.</li>
+                    <li>Nếu trong khoảng thời gian rất ngắn vận tốc được gọi là vận tốc tức thời.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td rowspan="2">\[\text{Vận tốc trung bình = } \frac{\text{Độ dịch chuyển}}{\text{Khoảng thời gian dịch chuyển}} \]</td>
+                        <td>\[\text{v = } \frac{∆d}{∆t} \]</td>
+                    </tr>
+                    <tr>
+                        <td>\[\vec{v} \text{ = } \frac{\vec{∆d}}{∆t} \]</td>
+                    </tr>
+                </table>
+                <h2>IV. Một số phương pháp đo tốc độ</h2>
+                <ul>
+                    <li>Đo thời gian vật đi giữa hai vị trí xác định và khoảng cách giữa chúng.</li>
+                    <li>Dùng cổng quang điện và đồng hồ đo thời gian hiện số.</li>
+                    <li>Dùng xe kĩ thuật số.</li>
+                </ul>
+            </div>
+            <div id="bai2">
+                <h1>Bài 2: ĐỒ THỊ ĐỘ DỊCH CHUYỂN THEO THỜI GIAN. ĐỘ DỊCH CHUYỂN TỔNG HỢP VÀ VẬN TỐC TỔNG HỢP</h1>
+                <h2>I. Đồ thị độ dịch chuyển theo thời gian của chuyẻn động thẳng</h2>
+                <ul>
+                    <li>Đồ thị là đường thẳng qua gốc tọa độ</li>
+                    <li>Giá trị của vận tốc bằng độ dốc của đồ thị độ dịch chuyển theo thời gian.</li>
+                    <li>Nếu độ dốc của đồ thị là âm, vật đang chuyển động theo chiều ngược lại.</li>
+                </ul>
+                <h2>II. Độ dịch chuyển tổng hợp</h2>
+                <ul>
+                    <li>Độ dịch chuyển tổng hợp là độ dịch chuyển từ vị trí đầu đến vị trí cuối.</li>
+                </ul>
+                <h2>III. Vận tốc tổng hợp</h2>
+                <ul>
+                    <li>Nếu một vật tham gia đồng thời hai chuyển động theo hai phương và mỗi phương có một vận tốc thì vận tốc tổng hợp bằng tổng các vận tốc này.</li>
+                    <li>Công thức vận tốc tổng hợp:</li>
+                </ul> 
+                <table>
+                    <tr>
+                        <td><strong>Trường hợp</strong></td>
+                        <td><strong>Công thức</strong></td>
+                    </tr>
+                    <tr>
+                        <td>$$\vec{v_1} \nearrow \nearrow \vec{v_2}$$</td>
+                        <td>v = v<sub>1</sub> + v<sub>2</sub></td>
+                    </tr>
+                    <tr>
+                        <td>$$\vec{v_1} \nearrow \swarrow \vec{v_2}$$</td>
+                        <td>v = |v<sub>1</sub> + v<sub>2</sub>|</td>
+                    </tr>
+                    <tr>
+                        <td>$$\vec{v_1} \perp \vec{v_2}$$</td>
+                        <td>$$ v = \sqrt{v_1^2 + v_2^2}$$</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="bai3">
+                <h1>Bài 3: GIA TỐC VÀ ĐỒ THỊ VẬN TỐC - THỜI GIAN</h1>
+                <h2>I. Gia tốc</h2>
+                <ul>
+                    <li>Bất cứ vật nào có tốc độ thay đổi hoặc đang đổi hướng chuyển động đều có gia tốc.</li>
+                    <li>Gia tốc là độ thay đổi vận tốc trong một đơn vị thời gian.</li>
+                    <li>Nếu khoảng thời gian rất nhỏ thì gia tốc được gọi là gia tốc tức thời.</li>
+                    <li>Gia tốc là một đại lương vecto. Khi xác định cần xác định cả độ lớn và hướng.</li>
+                    <li>Đơn vị: m/s<sup>2</sup></li>
+                </ul>
+                <h2>II. Vẽ đồ thị vận tốc - thời gian trong chuyển động thẳng</h2>
+                <ul>
+                    <li>Độ dốc của độ thi vận tốc - thời gian có giá trị bằng gia tốc của chuyển động.</li>
+                    <li>Nếu độ dốc là âm và vật đang chuyển động với vận tốc dương thì vật đang chuyển động chậm dần (gia tốc âm)</li>
+                    <li>Độ lớn độ dịch chuyển bằng diện tích dưới đồ thị vận tốc - thời gian</li>
+                </ul> 
+            </div>
+            <div id="bai4">
+                <h1>Bài 4: CHUYỂN ĐỘNG BIẾN ĐỔI</h1>
+                <h2>I. Công thức của chuyển động biến đổi đều</h2>
+                <ul>
+                    <p>\[\text{Công thức tính vận tốc: } \alpha \text{ = } \frac{v \text{ - } v_0}{t} \text{ hay là } v \text{ = } v_0 \text{ + } \alpha t \]</p>
+                    <p>\[\text{Vận tốc trung bình = } \frac{v - v_0}{2}\]</p>
+                    <p>\[\text{Công thức tính độ dịch chuyển: } d \text{ = } \frac{v - v_0}{2} \text{ . } t \]</p>
+                    <p>\[\text{Công thức tính quãng đường: } s \text{ = } \frac{v_0 + v_0 + at}{2} \text{ . } t \rightarrow s \text{ = } v_0t \text{ + } \frac{1}{2} at^2 \]</p>
+                    <p>\[\text{Công thức liên hệ giữa quãng đường, vận tốc và gia tốc: } s \text{ = } \frac{v_0 + v}{2} \text{ . } \frac{v - v_0}{a} \text{ hay } s \text{ = } \frac{v^2 - v_0^2}{2a} \rightarrow 2as \text{ = } v^2 - v_0^2\]</p>
+                </ul>
+                <h2>II. Đo gia tốc rơi tự do</h2>
+                <ul>
+                    <li>Sự rơi của các vật khi chỉ chịu tác dụng của trọng lức được gọi là sự rơi tự do.</li>
+                    <li>Gia tốc rơi tự do thường được lấy giá trị là 9,81 m/s² (kí hiệu: g) có chiều thẳng đứng xuống dưới.</li>
+                    <li>\[g \text{ = } \frac{2s}{t^2} \]</li>
+                </ul>
+                <h2>III. Chuyển động của vật bị ném</h2>
+                <ul>
+                    <li>Một vật được bắn theo phương ngang với vận tốc ban đầu xác định thì chuyển động của vật theo phương ngang và theo phương thẳng đứng độc lập với nhau.</li>
+                    <li>Chuyển động thẳng đứng và chuyển động ngang của quả bóng độc lập với nhau</li>
+                </ul>
+            </div>
+            <div id="thinghiem">
+                <h1>Thí nghiệm</h1>
+                <button id="startButton">Thí nghiệm chuyển động của vật bị ném</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+
+        document.getElementById('startButton').addEventListener('click', () => {
+            window.location.href = 'thinghiem_chuong1_lop10.html'; // Thay thế bằng tên file HTML chứa mô phỏng
+        });
+    </script>
+</body>
+
+</html>

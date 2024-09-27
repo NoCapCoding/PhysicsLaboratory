@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong5_Lop10.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong1_Lop10.html">Chương 1</a>
+                    <a href="Chuong2_Lop10.html">Chương 2</a>
+                    <a href="Chuong3_Lop10.html">Chương 3</a>
+                    <a href="Chuong4_Lop10.html">Chương 4</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> SỰ CHUYỂN ĐỘNG TRÒN</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> SỰ BIẾN DẠNG</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1 style="color:white;"> Bài 1: Sự chuyển động tròn</h1>
+                <h2>I. Mô tả chuyển động tròn</h2>
+                <h3><i>* Độ dịch chuyển góc và tốc độ góc</i></h3>
+                <ul>
+                    <li>Một vật thực hiện chuyển động tròn khi nó di chuyển trên  một đường tròn.</li>
+                    <li><strong><u>Độ dịch chuyển góc</u></strong> là góc θ ứng với cung tròn s mà vật đã đi được kể từ vị trí ban đầu.</li>
+                    <p>$$\text{Độ dịch chuyển góc (rad) = }\frac{\text{độ dài cung(m)}}{\text{bán kính(m)}} \text{   hay   } θ=\frac{s}{r}$$</p>
+                    <li>Đơn vị: radian (rad)</li>
+                    <li>Nếu s=r thì θ=1rad</li>
+                    <li><strong><u>Tốc độ góc (ω)</u></strong> là đại lượng xác định bởi độ dịch chuyển góc trong một đơn vị thời gian.</li>
+                    <p>$$\text{Tốc độ góc (rad/s) = }\frac{\text{độ dịch chuyển góc(rad)}}{\text{thời gian(s)}} \text{   hay   } ω=\frac{θ}{t}$$</p>
+                    <li>Đơn vị: rad/s</li>
+                </ul>
+                <h3><i>* Tốc độ và vận tốc của chuyển động tròn đều</i></h3>
+                <ul>
+                    <li>Một vật chuyển động tròn đều khi nó di chuyển trên một đường tròn với tốc độ không đổi.</li>
+                    <li>Tốc độ của chuyển động tròn đều là không đổi.</li>
+                    <li>Chu kì (T) là thời gian vật đi hết một vòng.</li>
+                    <li>Vận tốc của vật thay đổi theo hướng của vật tốc.</li>
+                    <p>$$\text{Tốc độ chuyển động tròn (m/s) = }\frac{\text{độ dài đường tròn(m)}}{\text{chu kì(s)}} \text{   hay   } v=\frac{2πr}{T}$$</p>
+                    <p>$$\text{Tốc độ = tốc độ góc . bán kính    hay    v=ωr}$$</p>
+                </ul>
+                <h3><i>* Mối liên hệ giữa tốc độ và tốc độ góc</i></h3>
+                <ul>
+                    <li>Tốc độ v của vật chuyển động tròn phụ thuộc vào vào <strong><u>tốc độ góc ω</u></strong> và <strong><u>khoảng cách r</u></strong> từ vật đến tâm quỹ đạo.</li>
+                </ul>
+                <h2>II.	Lực hướng tâm và gia tốc hướng tâm</h2>
+                <ul>
+                    <li>Vận tốc của chuyển động tròn đều luôn luôn thay đổi vì hướng liên tục thay đổi.</li>
+                    <p>⇨Chuyển động tròn đều là chuyển động có gia tốc.</p>
+                    <li>Lực tác dụng lên vật luôn hướng vào tâm quỹ đạo tròn nên được gọi là lực hướng tâm.</li>
+                    <li>Lực hướng tâm là lực tác dụng vào một vật chuyển động tròn đều và gây ra gia tốc cho vật.</li>
+                    <li>Gia tốc hướng tâm là gia tốc gây ra bởi lực hướng tâm và có cùng hướng với lực hướng tâm.</li>
+                    <p>$$\text{ gia tốc hướng tâm }(m/s^2)= \frac{\text{tốc độ}^2 (m/s)}{\text{bán kính quỹ đạo(m)}} \text{   hay   } a=\frac{v^2}{r}$$</p>
+                    <p>$$a=\frac{v^2}{r}=\frac{(ωr)^2}{r}=rω^2$$</p>
+                    <p>$$F=ma=m\frac{v^2}{r}=mrω^2$$</p>
+                </ul>
+            </div>
+            <div id="bai2">
+                <h1 style="color:white;">Bài 2: Sự biến dạng</h1>
+                <h2>I.	Biến dạng kéo và biến dạng nén</h2>
+                <ul>
+                    <li>Biến dạng nén làm vật bị ngắn đi.</li>
+                    <li>Biến dạng kéo kéo vật dài thêm.</li>
+                </ul>
+                <h2>II.	Định luật Hooke (Húc)</h2>
+                <h3><i>* Đặc tính của lò xo</i></h3>
+                <ul>
+                    <li>Khi kéo hoặc nén, lực đàn hồi xuất hiện ở hai đầu lò xò và có hướng ngược với lực gây biến dạng lò xo.</li>
+                    <li>Độ giãn (độ biến dạng) là độ dài thêm ra dưới tác dụng của trọng lượng vật treo.</li>
+                    <li>Giới hạn đàn hồi là giá trị giới hạn của trọng lượng vật treo, nếu vượt quá giá trị này thì khi bỏ vật treo đi lò xo không thể trở lại chiều dài ban đầu.</li>
+                </ul>
+                <h3><i>* Định luật Hooke</i></h3>
+                <ul>
+                    <li>Trong giới hạn đàn hồi, độ lớn của lực đàn hồi của lò xo tỉ lệ thuận với độ biến dạng của lò xo.</li>
+                    <p>$$F=k|Δl|$$</p>
+                    <li>Hệ số tỉ lệ k được gọi là độ cứng của lò xo (Đơn vị: N/m).</li>
+                    <li>Ứng dụng: cân đồng hồ,…</li>
+                </ul>
+            </div>
+            <div id="thinghiem">
+                <h1>Thí nghiệm</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

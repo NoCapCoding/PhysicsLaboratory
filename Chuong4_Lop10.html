@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng thí nghiệm online</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="Chuong4_Lop10.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="Menu_login.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="Menu_login.html">Trang chủ</a></li>
+            <li id="link1" class="link dropdown">
+                <a href="#">Các hoạt động</a>
+                <div class="dropdown-content">
+                    <a href="Chuong1_Lop10.html">Chương 1</a>
+                    <a href="Chuong2_Lop10.html">Chương 2</a>
+                    <a href="Chuong3_Lop10.html">Chương 3</a>
+                    <a href="Chuong5_Lop10.html">Chương 5</a>
+                </div>
+            </li>
+            <li id="link3" class="link"><a href="#">Về chúng tôi</a></li>
+        </ul>
+        <div class="user-menu">
+            <div class="user-avatar">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Tên Người Dùng</span>
+                <i class="ri-arrow-down-s-line" id="toggleMenu"></i>
+            </div>
+            <div class="user-menu-content" id="menuContent">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Lịch sử học</a>
+                <a href="#" id="logoutLink">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#" onclick="showContent('bai1')"><strong>Bài 1:</strong> ĐỘNG LƯỢNG VÀ ĐỊNH LUẬT BẢO TOÀN ĐỘNG LƯỢNG</a>
+            <a href="#" onclick="showContent('bai2')"><strong>Bài 2:</strong> ĐỘNG LƯỢNG VÀ NĂNG LƯỢNG TRONG VA CHẠM</a>
+            <a href="#" onclick="showContent('thinghiem')"><strong>Thí nghiệm:</strong></a>
+        </div>
+
+        <div class="content">
+            <div id="bai1" class="active">
+                <h1 style="color:white;">Bài 1: Động lượng và định luật bảo toàn động lượng</h1>
+                <h2>I. Động lượng</h2>
+                <ul>
+                    <li>Động lượng (→p) là đại lượng đặc trưng cho lượng chuyển động của vật trong tương tác.</li>
+                    <li>Động lượng là một đại lượng vecto, cùng hướng với vận tốc.</li>
+                    <p>$$\text{động lượng = khối lượng.vận tốc   hay   }\vec{p}=m\vec{v}$$</p>
+                    <li>Đơn vị: kg.m/s</li>
+                </ul>
+                <h2>II. Định luật bảo toàn động lượng</h2>
+                <ul>
+                    <li>Hợp lực tác dụng lên một vật bằng tốc độ thay đổi động lượng của nó.</li>
+                    <p>$$\vec{F}=\frac{Δ\vec{p}}{Δt} \text{   với }Δ\vec{p} \text{  là độ thay đổi động lượng trong thời gian ∆𝑡} $$</p>
+                    <li>Nếu không có ngoại lực nào tác dụng lên hệ thì tổng động lượng của hệ không đổi tức là hệ được bảo toàn  (định luật bảo toàn động lượng).</li>
+                    <p>$$\vec{p_1}+\vec{p_2}=\text{ không đổi}$$</p>
+                    <li>Hệ chỉ có những lực của các vật trong hệ tác dụng lần nhau, không có tác dụng của những lực từ bên ngoài hệ hoặc nếu có thì các lực này triệt tiêu lẫn nhau thì gọi là hệ kín.</li>
+                </ul>
+                <h2>III. Vận dụng định luật bảo toàn động lượng</h2>
+                <ul>
+                    <li>Trong một hệ kín, nếu có một phần của hệ chuyển động theo một hướng, theo định luật bảo toàn động lượng phần còn lại của hệ phải chuyển động theo hướng ngược lại (chuyển động bằng phản lực).
+                    </li>
+                </ul>
+            </div>
+            <div id="bai2">
+                <h1 style="color:white;"> Bài 2: Động lượng và năng lượng trong va chạm</h1>
+                <h2>I.	Đánh giá động lượng và năng lượng của vật va chạm bằng dụng cụ thực hành</h2>
+                <ul>
+                    <li>Va chạm mà sau đó cơ năng của hệ không thay đổi gọi là va chạm hoàn toàn đàn hồi.</li>
+                    <li>Va chạm mà sau đó cơ năng của hệ giảm so với trước là va chạm hoàn toàn mềm.</li>
+                </ul>
+                <h2>II.	Một số hiện tượng va chạm trong thực tiễn</h2>
+                <ul>
+                    <li>Đối với đa số các trường hợp va chạm trong thực tế, sự hao hụt của động năng thường làm biến dạng các vật.</li>
+                </ul>
+            </div>
+            <div id="thinghiem">
+                <h1>Thí nghiệm</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content div');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.ri-arrow-down-s-line')) {
+                const dropdowns = document.getElementsByClassName("user-menu-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        document.getElementById('logoutLink').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'Login/Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfo = document.querySelector('.user-avatar');
+            const username = localStorage.getItem('loggedInUser');
+
+            if (username) {
+                userInfo.querySelector('.username').textContent = username;
+            } else {
+                window.location.href = 'Login/Login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
